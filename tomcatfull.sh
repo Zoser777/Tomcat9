@@ -17,9 +17,9 @@ if [ $(whoami) != "root" ]; then
 
 else
 
-        echo " ---------------------------------";
+        echo " --------------------------------- ";
         echo " Iniciando programa ";
-        echo " ---------------------------------";
+        echo " --------------------------------- ";
 
 
 fi
@@ -31,9 +31,9 @@ read -p " Nombre de usuario en el sistema : " user;
 
 
 echo " "
-echo " ---------------------------------";
+echo " --------------------------------- ";
 echo " Actualizando sistema ";
-echo " ---------------------------------";
+echo " --------------------------------- ";
 echo " "
 
 
@@ -46,9 +46,9 @@ sudo apt update &>/dev/null
 sleep 3;
 
 echo " "
-echo " ---------------------------------";
+echo " --------------------------------- ";
 echo " Instalando JDK de JAVA ";
-echo " ---------------------------------";
+echo " --------------------------------- ";
 echo " "
 
 
@@ -61,9 +61,9 @@ sudo apt install default-jdk -y
 sleep 3;
 
 echo " "
-echo " ---------------------------------";
+echo " --------------------------------- ";
 echo " Configurando usuarios de TOMCAT ";
-echo " ---------------------------------";
+echo " --------------------------------- ";
 echo " ";
 
 
@@ -80,9 +80,9 @@ sleep 3;
 
 
 echo " ";
-echo " ---------------------------------";
+echo " --------------------------------- ";
 echo " Descargando Tomcat9 ";
-echo " ---------------------------------";
+echo " --------------------------------- ";
 echo " ";
 
 
@@ -96,9 +96,9 @@ sleep 3;
 
 
 echo " ";
-echo " ------------------------------";
+echo " --------------------------------- ";
 echo " Descomprimiendo Tomcat9";
-echo " ------------------------------";
+echo " --------------------------------- ";
 echo " ";
 
 
@@ -110,9 +110,9 @@ sleep 3;
 
 
 echo " ";
-echo " -----------------------------";
+echo " --------------------------------- ";
 echo " Concediendo permisos necesarios";
-echo " -----------------------------";
+echo " --------------------------------- ";
 echo " ";
 
 sleep 3;
@@ -128,9 +128,9 @@ sudo chown -R tomcat webapps/ work/ temp/ logs/
 
 
 echo " ";
-echo " ---------------------------";
+echo " --------------------------------- ";
 echo " Comprobando si Tomcat está operativo";
-echo " ---------------------------":
+echo " --------------------------------- ";
 echo " ";
 
 
@@ -147,26 +147,24 @@ sleep 3;
 
 
 echo " ";
-echo " -----------------------------";
+echo " --------------------------------- ";
 echo " Tomcat está funcionando ";
-echo " -----------------------------";
+echo " --------------------------------- ";
 echo " ";
-#comprobar errores
 
 
 
 
 echo " ";
-echo " -----------------------------";
+echo " --------------------------------- ";
 echo " Configurando entorno de red";
-
-echo " -----------------------------";
+echo " --------------------------------- ";
 echo " ";
 
 echo " ";
-echo " -----------------------------";
+echo " --------------------------------- ";
 echo " Instalando ufw ";
-echo " -----------------------------":
+echo " --------------------------------- ";
 echo " ";
 
 
@@ -177,10 +175,9 @@ sleep 2;
 
 
 echo " ";
-echo " ";
-echo " ---------------------------";
+echo " --------------------------------- ";
 read -p " Tienes puesto el adaptador solo-anfrition?(si o no): " adap;
-echo " ---------------------------";
+echo " --------------------------------- ";
 echo " ";
 
 
@@ -207,10 +204,10 @@ sudo ufw allow 8080 &>/dev/null;
 sleep 3;
 
 echo " ";
-echo " ------------------------------";
+echo " --------------------------------- ";
 echo " Puedes acceder a http://$xx:8080"
 echo " para comprobar que todo funciona";
-echo " ------------------------------";
+echo " --------------------------------- ";
 echo " ";
 
 
@@ -223,18 +220,18 @@ sleep 3;
 
 
 echo " ";
-echo " ---------------------------- ";
+echo " --------------------------------- ";
 echo " Configurando usuario y contraseña para directorio manager en tomcat ";
-echo " -----------------------------";
+echo " --------------------------------- ";
 echo " ";
 
 sudo systemctl enable tomcat
 
 echo " ";
-echo " ---------------------------- ";
+echo " --------------------------------- ";
 read -p "Ingrese un usuario para el directorio manager: " y
 read -p "Ingrese una contraseña: " yy
-echo " ---------------------------- ";
+echo " --------------------------------- ";
 echo " ";
 
 
@@ -302,9 +299,9 @@ service tomcat restart
 
 
 echo " ";
-echo " -------------------------------------- ";
+echo " --------------------------------- ";
 echo " Tomcat9 instalado con éxito ";
-echo " ---------------------------------------";
+echo " --------------------------------- ";
 echo " ";
 
 exit 1;
